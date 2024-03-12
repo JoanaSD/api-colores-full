@@ -68,7 +68,7 @@ function borrarColor(id) {
 
             let coleccion = conexion.db("colores").collection("colores");
 
-            let deletedCount = await coleccion.deleteOne({_id: new ObjectId(id)});
+            let {deletedCount} = await coleccion.deleteOne({_id: new ObjectId(id)});
 
             conexion.close();
 
